@@ -11,7 +11,7 @@ This tool scans a given network interface for IPv6 neighbors discovered via SLAA
 Clone the repository and install it in editable mode:
 
 ```bash
-git clone https://github.com/YOUR-USER/slaac-resolver.git
+git clone https://github.com/cjuniorfox/slaac-resolver.git
 cd slaac-resolver
 pip install -e .
 ````
