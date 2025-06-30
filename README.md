@@ -23,13 +23,15 @@ This will make the `slaac-resolver` command available on your system.
 ### Command-Line Interface
 
 ```bash
-slaac-resolver <interface>
+slaac-resolver <interface> [--log-level <LOG_LEVEL>]
 ```
+
+. `--log-level` is optional. Possible values: `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`. Default is `INFO`.
 
 Example:
 
 ```bash
-slaac-resolver br0
+slaac-resolver br0 --log-level DEBUG
 ```
 
 The output is a JSON list of resolved neighbors, like:
@@ -50,7 +52,7 @@ You can also use the resolver in your Python code:
 ```python
 from slaac_resolver import get_ipv6_neighbors
 
-neighbors = get_ipv6_neighbors("br0")
+neighbors = get_ipv6_neighbors("br0", log_level=logging.DEBUG)
 print(neighbors)
 ```
 
