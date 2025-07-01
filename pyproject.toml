@@ -1,6 +1,6 @@
 [project]
 name = "slaac-resolver"
-version = "0.0.3"
+version = "0.0.4"
 description = "Discover SLAAC IPv6 neighbors and resolve their names via mDNS (Avahi)"
 readme = "README.md"
 requires-python = ">=3.7"

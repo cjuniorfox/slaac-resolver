@@ -65,7 +65,7 @@ def get_ipv6_neighbors(interface, log_level=logging.INFO):
         if len(resolved_output) >= 2:
             name = resolved_output[1]
             neighbors.append({
-                "hostname": name.split("."),
-                "ipv6": addr.split(":")
+                "Hostname": name.split(".")[0],
+                "Address": addr.split(":")
             })
     return neighbors
