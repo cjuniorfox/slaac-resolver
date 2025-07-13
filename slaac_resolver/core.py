@@ -54,6 +54,9 @@ def get_ipv6_neighbors(interface, log_level=logging.INFO):
         if len(parts) < 1:
             continue
         addr = parts[0]
+        if addr.startswith("fe80:") or addr.startswith("::1"):
+            logging.debug(f"Skipping link-local address: {addr}")
+            continue
         ipv6_addrs.append(addr)
 
     # Resolve all addresses in parallel
